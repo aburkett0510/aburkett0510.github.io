@@ -1,0 +1,16 @@
+
+.content {
+    max-width: 500px;
+    margin: auto;
+}
+
+@font-face {
+    font-family: NewRodin Pro;
+    src: url("Assets/FOT-NewRodin Pro EB.otf");
+}
+
+body {
+    font-family:NewRodin Pro;
+    background-color: black;
+    color: white;
+  }
