@@ -9,11 +9,22 @@
     <h2>Archives</h2>
     <br>
     <h4>Listen to your own audio files here</h4>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <input type="file" id="upload" />
     <audio id="audio" controls>
         <source src="" id="src" />
-    </audio>
+    </audio>-->
+    <input type="file" id="musicFile" accept="audio/*">
+    <button onclick="playMusic()">Play</button>
+    <audio id="musicPlayer" controls=""></audio>
+    <script>
+        function playMusic() {
+            var musicFile = document.getElementById("musicFile").files[0];
+            var musicPlayer = document.getElementById("musicPlayer");
+            musicPlayer.src = URL.createObjectURL(musicFile);
+            musicPlayer.play();
+    }
+  </script>
     <br>
     <h4>New York, NY, USA</h4>
     <br>
