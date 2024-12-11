@@ -13,4 +13,12 @@ document.addEventListener("DOMContentLoaded", function() {
         const randomIndex = Math.floor(Math.random() * 3);
         document.querySelector('#text').src = textElement[randomIndex];
     });
+
+    function handleFiles(event) {
+        var files = event.target.files;
+        $("#src").attr("src", URL.createObjectURL(files[0]));
+        document.getElementById("audio").load();
+    }
+    
+    document.getElementById("upload").addEventListener("change", handleFiles, false);
 });
